@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package softwaredevgroupmywork;
 
 import java.sql.Connection;
@@ -13,6 +14,7 @@ import java.sql.Statement;
  *
  * @author 44753
  */
+
 public class createUserTable {
     
    public static void main(String[] args) {
@@ -29,7 +31,7 @@ public class createUserTable {
                 + "            userLanguageChoice VARCHAR(30), \n "
                 + "            userLanguageLevel  VARCHAR(30), \n "
                 + "            availableTutors VARCHAR(30)\n " + " );";
-        
+                
         try {
             stmt = con.createStatement();
             stmt.executeUpdate(createString);
