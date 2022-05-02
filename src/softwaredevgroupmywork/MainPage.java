@@ -41,7 +41,7 @@ public class MainPage extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(643, 743));
 
         jButton1.setText("Student Progress");
@@ -54,6 +54,11 @@ public class MainPage extends javax.swing.JFrame {
         jButton2.setText("Student Performance");
 
         jButton3.setText("Language Selection");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("Student Engagement");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -136,6 +141,13 @@ public class MainPage extends javax.swing.JFrame {
         StudentEngagement studentE = new StudentEngagement();
         studentE.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        close();
+        SelectLanguage selectL = new SelectLanguage();
+        selectL.setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments

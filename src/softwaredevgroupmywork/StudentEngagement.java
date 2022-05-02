@@ -5,6 +5,9 @@
 
 package softwaredevgroupmywork;
 
+import java.awt.Toolkit;
+import java.awt.event.WindowEvent;
+
 /**
  *
  * @author aamin
@@ -17,6 +20,12 @@ public class StudentEngagement extends javax.swing.JFrame {
     public StudentEngagement() {
         initComponents();
     }
+    
+    public void close(){
+    WindowEvent closeWindow = new WindowEvent(this, WindowEvent.WINDOW_CLOSING);
+    Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(closeWindow);
+    }
+        
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -42,7 +51,7 @@ public class StudentEngagement extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(643, 743));
 
         jTextField4.setText("jTextField2");
@@ -197,6 +206,9 @@ public class StudentEngagement extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        close();
+        MainPage mPage = new MainPage();
+        mPage.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
